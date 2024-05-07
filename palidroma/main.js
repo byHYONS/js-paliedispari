@@ -10,7 +10,8 @@
 // 7. nomino una variabile risultato che mi richiama la funzione.
 
 
-const parolaUtente = prompt('Inserisci una parola:');
+const parolaUtente = prompt('Inserisci una parola:').toLocaleLowerCase();
+
 
 function paroraPalindroma(parola){
 

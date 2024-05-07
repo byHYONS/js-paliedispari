@@ -34,6 +34,17 @@ if (parola === parolaInvertita) {
 5. Dichiariamo chi ha vinto.
 
 ### Svolgimento:
+1. definisco due variabili con valore il prompt che chieda all'utente di inserire un numero da 1 a 5 e di inserire pari o dispari;
+2. definisco una funzione che generi un numero da 1 a 5 random per il computer:
+```
+fuction numeroComputer(){
+    Let numeroRandom = Math.floor(Math.random() * 5) + 1;
+    return numeroRandom;
+}
+```
+3. sommo il valore numerico dell'utente con il numero risultante della funzione;
+4. definisco una funzione che prenda l'input dell'utente `pari o dispari` e la somma dei nummeri calcolata in precedeza;
+5. se la somma dei due numeri è pari e l'utente ha scritto paro, vince l'utente, altrimenti vince il computer.
 
 
 ##### FINE
