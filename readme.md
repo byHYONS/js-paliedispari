@@ -43,8 +43,16 @@ fuction numeroComputer(){
 }
 ```
 3. sommo il valore numerico dell'utente con il numero risultante della funzione;
-4. definisco una funzione che prenda l'input dell'utente `pari o dispari` e la somma dei nummeri calcolata in precedeza;
-5. se la somma dei due numeri è pari e l'utente ha scritto paro, vince l'utente, altrimenti vince il computer.
+4. definisco una funzione che stabilisca se la somma dei nummeri calcolata in precedeza sia pari oppure dispari;
+5. attraverso una istruzione condizionale stabilisco chi vince
+```
+if (somma % 2 === 0) {
+    true
+} {
+    false
+}
+```
+6. 
 
 
 ##### FINE
