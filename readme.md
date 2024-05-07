@@ -43,16 +43,26 @@ fuction numeroComputer(){
 }
 ```
 3. sommo il valore numerico dell'utente con il numero risultante della funzione;
-4. definisco una funzione che stabilisca se la somma dei nummeri calcolata in precedeza sia pari oppure dispari;
-5. attraverso una istruzione condizionale stabilisco chi vince
+4. definisco una funzione che stabilisca se la somma dei nummeri calcolata in precedeza sia pari oppure dispari:
 ```
-if (somma % 2 === 0) {
-    true
-} {
-    false
+function pariDispari(numero) {
+    return numero % 2 === 0; // vero
 }
 ```
-6. 
-
+5. Attraverso un operatore ternario estraggo dal valore true se il risultato è pari o dispari: 
+```
+let risultato = pariDispari(somma);
+risultato = risultato ? 'pari' : 'dispari';
+```
+6. stampo sia in console e sia a scheromo se l'utente ha vino o ha perso attraverso una istruzione condizionale:
+```
+if (risultato === sceltaUtente) {
+    console.log('Hai Vinto');
+    alert('Hai Vinto);
+} else {
+    console.log('Hai Perso');
+    alert('Hai Perso);
+}
+```
 
 ##### FINE

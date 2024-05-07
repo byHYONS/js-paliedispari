@@ -7,13 +7,38 @@
 // 4. definisco una funzione che prenda l'input dell'utente `pari o dispari` e la somma dei nummeri calcolata in precedeza;
 // 5. se la somma dei due numeri è pari e l'utente ha scritto paro, vince l'utente, altrimenti vince il computer.
 
-const numeroUtente = numeroRandom(1, 5);
-console.log({numeroUtente});
+// chiedo il numero utente con la convalida:
+let numeroUtente;
+while (true) {
+    numeroUtente = prompt('Inserisci un numero da 1 a 5:');
+    console.log({numeroUtente});
+    numeroUtente = Number(numeroUtente);
 
-const sceltaUtente = 'pari';
+    if (!isNaN(numeroUtente) && numeroUtente >= 1 && numeroUtente <= 5){
+        break
+
+    } else {
+        console.log('Hai inserito un valore non numerico o un numero inferiore a 1 e superiore a 5. Riscrivi il numero corretto!');
+    }    
+} 
+console.log(typeof numeroUtente);
+
+// chiedo pari o dispari all'utente con la convalida:
+let sceltaUtente;
+while (true){
+    sceltaUtente = prompt('Scegli Pari o Dispari:');
+    sceltaUtente = sceltaUtente.toLocaleLowerCase();
+
+    if (sceltaUtente === 'pari' || sceltaUtente === 'dispari') {
+        break
+
+    } else {
+        console.log('Hai scritto un valore diverso da Pari o Dispari. Riscrivi il valore!');
+    }
+}
 console.log({sceltaUtente});
 
-// funzione per generare numero randomico
+// // funzione per generare numero randomico:
 function numeroRandom(min, max){
     console.log({min});
     console.log({max});
@@ -23,23 +48,29 @@ function numeroRandom(min, max){
     return numeroCasuale; 
 }
 
-const somma = numeroUtente + numeroRandom(5, 1);
+const somma = numeroUtente + numeroRandom(1, 5);
 console.log({somma});
 
-// funzione per stabilire se un numero è pari o dispari
+// funzione per stabilire se un numero è pari o dispari:
 function pariDispari(numero) {
-    console.log({numero});
-    if (numero % 2 === 0) {
-        return true;
-    } else {
-        return false;
-    }
+
+    return numero % 2 === 0; // vero
 }
-console.log(pariDispari());
 
-pariDispari(somma);
+// do il valore di vero o falro al risultato:
+let risultato = pariDispari(somma);
+risultato = risultato ? 'pari' : 'dispari';
+console.log({risultato});
 
-console.log(`Hai scelto ${sceltaUtente} è uscito ${(pariDispari() ? 'Pari' : 'Dispari')} ${(pariDispari() ? 'HAI VINTO' : 'HAI PERSO')}`);
+// stampiamo il valore in console e con l'alert:
+if (risultato === sceltaUtente) {
+    console.log(`Hai scelto ${sceltaUtente} è uscito ${risultato}: Hai Vinto`);
+    alert(`Hai scelto ${sceltaUtente} è uscito ${risultato}: Hai Vinto`);
 
+} else {
+    console.log(`Hai scelto ${sceltaUtente} è uscito ${risultato}: Hai Perso`);
+    alert(`Hai scelto ${sceltaUtente} è uscito ${risultato}: Hai Perso`);
+
+}
 
 // FINE
