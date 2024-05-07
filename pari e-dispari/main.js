@@ -7,14 +7,18 @@
 // 4. definisco una funzione che prenda l'input dell'utente `pari o dispari` e la somma dei nummeri calcolata in precedeza;
 // 5. se la somma dei due numeri è pari e l'utente ha scritto paro, vince l'utente, altrimenti vince il computer.
 
-// chiedo il numero utente con la convalida:
+// definissco in variabile il minimo e il massimo da inserire come parametri alla funzione numeroRandom():
+const numMin = 1;
+const numMax = 5;
+
+// chiedo il numero all'utente con la convalida:
 let numeroUtente;
 while (true) {
     numeroUtente = prompt('Inserisci un numero da 1 a 5:');
     console.log({numeroUtente});
     numeroUtente = Number(numeroUtente);
 
-    if (!isNaN(numeroUtente) && numeroUtente >= 1 && numeroUtente <= 5){
+    if (!isNaN(numeroUtente) && numeroUtente >= numMin && numeroUtente <= numMax){
         break
 
     } else {
@@ -27,7 +31,7 @@ console.log(typeof numeroUtente);
 let sceltaUtente;
 while (true){
     sceltaUtente = prompt('Scegli Pari o Dispari:');
-    sceltaUtente = sceltaUtente.toLocaleLowerCase();
+    sceltaUtente = sceltaUtente.toLowerCase();
 
     if (sceltaUtente === 'pari' || sceltaUtente === 'dispari') {
         break
@@ -40,15 +44,14 @@ console.log({sceltaUtente});
 
 // // funzione per generare numero randomico:
 function numeroRandom(min, max){
-    console.log({min});
-    console.log({max});
+
     let numeroCasuale = Math.floor(Math.random() * max) + min;
     console.log({numeroCasuale});
 
     return numeroCasuale; 
 }
 
-const somma = numeroUtente + numeroRandom(1, 5);
+const somma = numeroUtente + numeroRandom(numMin, numMax);
 console.log({somma});
 
 // funzione per stabilire se un numero è pari o dispari:
@@ -57,8 +60,9 @@ function pariDispari(numero) {
     return numero % 2 === 0; // vero
 }
 
-// do il valore di vero o falro al risultato:
+// do il valore di vero o falso al risultato:
 let risultato = pariDispari(somma);
+
 risultato = risultato ? 'pari' : 'dispari';
 console.log({risultato});
 
