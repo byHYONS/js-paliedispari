@@ -42,7 +42,7 @@ while (true){
 }
 console.log({sceltaUtente});
 
-// // funzione per generare numero randomico:
+// funzione per generare un numero randomico:
 function numeroRandom(min, max){
 
     let numeroCasuale = Math.floor(Math.random() * max) + min;
@@ -69,11 +69,11 @@ console.log({risultato});
 // stampiamo il valore in console e con l'alert:
 if (risultato === sceltaUtente) {
     console.log(`Hai scelto ${sceltaUtente} è uscito ${risultato}: Hai Vinto`);
-    alert(`Hai scelto ${sceltaUtente} è uscito ${risultato}: Hai Vinto`);
+    alert(`Hai scelto ${sceltaUtente} è uscito ${risultato}: HAI VINTO!`);
 
 } else {
     console.log(`Hai scelto ${sceltaUtente} è uscito ${risultato}: Hai Perso`);
-    alert(`Hai scelto ${sceltaUtente} è uscito ${risultato}: Hai Perso`);
+    alert(`Hai scelto ${sceltaUtente} è uscito ${risultato}: HAI PERSO!`);
 
 }
 

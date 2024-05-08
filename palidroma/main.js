@@ -9,11 +9,11 @@
 // 6. scrivo una istruzione condizionale assegnando a return un risultato/stringa di testo;
 // 7. nomino una variabile risultato che mi richiama la funzione.
 
+// chiedi all'utente di inserire una parola:
+const parolaUtente = prompt('Inserisci una parola:').toLowerCase();
 
-const parolaUtente = prompt('Inserisci una parola:').toLocaleLowerCase();
-
-
-function paroraPalindroma(parola){
+// definisco una funzione per verificare se unanparola è palindroma:
+function parolaPalindroma(parola){
 
     let parolaInvertita = parola.split('').reverse();
     console.log({parola});
@@ -32,7 +32,8 @@ function paroraPalindroma(parola){
 
 }
 
-const risultato = paroraPalindroma(parolaUtente);
+// stampo il risultato in console e a schermo:
+const risultato = parolaPalindroma(parolaUtente);
 console.log(risultato);
 alert(risultato);
 
